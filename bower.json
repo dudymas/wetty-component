@@ -1,0 +1,28 @@
+{
+  "name": "wetty-component",
+  "version": "0.0.0",
+  "homepage": "https://github.com/dudymas/wetty-component",
+  "authors": [
+    "Jeremy White <dudymas@gmail.com>"
+  ],
+  "description": "web-tty with polymer",
+  "keywords": [
+    "wetty",
+    "hterm",
+    "polymer",
+    "tty",
+    "web-component"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.4",
+    "hterm": "Bowery/hterm"
+  }
+}

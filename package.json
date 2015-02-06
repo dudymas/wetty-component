@@ -1,0 +1,30 @@
+{
+  "name": "wetty-component",
+  "version": "0.0.0",
+  "description": "web tty component",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dudymas/wetty-component"
+  },
+  "keywords": [
+    "wetty",
+    "hterm",
+    "polymer",
+    "tty",
+    "web-component"
+  ],
+  "author": "Jeremy White <dudymas@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dudymas/wetty-component/issues"
+  },
+  "homepage": "https://github.com/dudymas/wetty-component",
+  "dependencies": {
+    "pty.js": "^0.2.4",
+    "websocket": "^1.0.17"
+  }
+}

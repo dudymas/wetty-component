@@ -1,0 +1,22 @@
+#!/bin/bash
+
+CONTAINER_NAME=wetty-component
+
+function __is-running() {
+    [[ $(docker ps -f status=running | grep $CONTAINER_NAME) != "" ]]
+}
+
+function __is-stopped() {
+    [[ ! $(docker ps -f status=exited | grep $CONTAINER_NAME) != "" ]]
+}
+
+if __is-running; then
+    echo 'Already running'
+    docker exec -it $CONTAINER_NAME bash
+elif __is-stopped; then
+    echo 'Restarting'
+    docker start $CONTAINER_NAME && docker attach $CONTAINER_NAME
+else
+    echo 'Creating'
+    docker run -it -v $PWD:/home/node/web -w /home/node/web --name $CONTAINER_NAME node "npm install && npm install -g bower && bower install --allow-root && bash"
+fi
